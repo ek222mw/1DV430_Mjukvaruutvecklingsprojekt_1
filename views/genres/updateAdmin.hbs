@@ -1,0 +1,12 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+  <h1>Edit genre</h1>
+<form class="" action="./{{genre}}" method="post" encType="multipart/form-data">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <input type="file" name="imgFile">
+  <input type="text"  name="genre"  value="{{genre}}">
+  <button>Update genre</button>
+</form>

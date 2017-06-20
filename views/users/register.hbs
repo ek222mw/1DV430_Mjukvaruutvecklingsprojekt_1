@@ -1,0 +1,13 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h1>Register form</h1>
+<form class="" action="/users/register" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <input type="text" name="username" placeholder="Enter username here">
+  <input type="password" name="password" placeholder="Enter password here"><br>
+  <input type="text" class="email" name="email" placeholder="Enter email being used for slack here"><br><br>
+  <button>Create user</button>
+</form>

@@ -1,0 +1,28 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+
+<form class="" action="./create" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <h3>Create rating</h3>
+  <select id="rating" name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+  </select>
+  <select id="album" name="album">
+    {{#each albums}}
+      <option value="{{album}}">{{album}}</option>
+    {{/each}}
+  </select>
+  <button>Create rating</button>
+</form>

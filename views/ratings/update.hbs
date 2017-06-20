@@ -1,0 +1,28 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<form class="" action="./update" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+    <h1>Edit rating</h1>
+  <select id="album" name="album">
+    {{#each ratings}}
+      <option value="{{album}}">{{album}}, {{rating}}</option>
+    {{/each}}
+  </select><br>
+    <div>New rating</div>
+    <select id="rating" name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+  <button>Update rating</button>
+</form>

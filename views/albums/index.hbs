@@ -1,0 +1,20 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h2>Albums</h2>
+{{#each albums}}
+<div class="itemsLarge">
+<h3 class="centeritems">{{album}}</h3>
+<a href="../albums/ratings/{{album}}">
+<img class="imgLarge" src="{{imgpath}}" alt="{{album}}">
+</a>
+<a class="atag" href="../albums/update/{{album}}">Edit</a>
+<a class="atag" href="../albums/delete/{{album}}">Delete</a><br>
+<h3>Biography</h3>
+<div>{{biography}}</div>
+<h3>Participants</h3>
+<div>{{participant}}</div>
+</div>
+{{/each}}

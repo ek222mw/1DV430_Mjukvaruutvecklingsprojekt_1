@@ -1,0 +1,19 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+
+<form class="" action="./create" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <h3>Create band</h3>
+  <input type="text" name="band" placeholder="Enter band name here"><br>
+  <textarea rows='6' cols='60' name="biography" placeholder="Enter biography here" ></textarea><br>
+    <textarea rows='6' cols='60' name="discography" placeholder="Enter discography here" ></textarea><br>
+  <select id="genre" name="genre">
+    {{#each genres}}
+      <option value="{{genre}}">{{genre}}</option>
+    {{/each}}
+  </select>
+  <button>Create band</button>
+</form>

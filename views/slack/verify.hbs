@@ -1,0 +1,10 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h2>Get Slack username from email</h2>
+<form class="" action="./verify" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <button>Verify</button>
+</form>

@@ -1,0 +1,10 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h2>Invite to Slack team on registered user email</h2>
+<form class="" action="./invite" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <button>Invite to Slack team</button>
+</form>

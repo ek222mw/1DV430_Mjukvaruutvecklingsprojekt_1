@@ -1,0 +1,18 @@
+{{#if slack}}
+<div>Slack</div>
+<form class="" action="./settings" method="post">
+<input type="hidden" name="_csrf" value="{{csrftoken}}">
+<label class="radio-inline"><input type="radio" name="slack" value="true" checked="checked">On</label>
+<label class="radio-inline"><input type="radio" name="slack" value="false">Off</label>
+<button>Send</button>
+</form>
+{{/if}}
+{{#unless slack}}
+<div>Slack</div>
+<form class="" action="./settings" method="post">
+<input type="hidden" name="_csrf" value="{{csrftoken}}">
+<label class="radio-inline"><input type="radio" name="slack" value="true" >On</label>
+<label class="radio-inline"><input type="radio" name="slack" value="false" checked="checked">Off</label>
+<button>Send</button>
+</form>
+{{/unless}}

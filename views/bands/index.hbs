@@ -1,0 +1,21 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h2>Bands</h2>
+{{#each bands}}
+<div class="itemsLarge">
+<h3 class="centeritems">{{band}}</h3>
+<a href="../bands/albums/{{band}}">
+<img class="imgLarge" src="{{imgpath}}" alt="{{band}}">
+</a><br>
+<a class="atag" href="../bands/update/{{band}}">Edit</a>
+<a class="atag" href="../bands/delete/{{band}}">Delete</a><br>
+<h3>Biography</h3>
+<div>{{biography}}</div>
+<h3>Discography</h3>
+<div>{{discography}}</div>
+
+</div>
+{{/each}}

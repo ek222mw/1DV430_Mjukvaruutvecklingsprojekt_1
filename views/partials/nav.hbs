@@ -1,0 +1,38 @@
+<nav id="menu-primary">
+  <!--toggle menu influenced from:https://shellcreeper.com/full-css-responsive-navigation-toggle-no-javascript/-->
+  <div class="menu-container">
+
+          <div id="menu-toggle-primary">
+              <a class="close-menu-primary" href="#menu-primary"><h1>Close menu</h1></a>
+              <a class="open-menu-primary" href="#"><h1>Open menu</h1></a>
+          </div><!-- .menu-toggle -->
+<div class="wrap">
+<ul class="menu-items" id="menu-primary-items">
+
+  {{#unless loggedin}}
+  <li class="menu-item"><a href="../../../../../">Login</a></li>
+  <li class="menu-item"><a href="../../../../../users/register">Register</a></li>
+  {{/unless}}
+  {{#if loggedin}}
+  <li><a><form method="post" action="../../../../../../users/logout" class="inl">
+    <input type="hidden" name="_csrf" value="{{csrftoken}}">
+    <button type="submit" name="" value="" class="link-btn">
+      Logout
+    </button>
+  </form></a></li>
+  <li class="menu-item"><a href="../../../../../genres/create">Create new genre</a></li>
+  <li class="menu-item"><a href="../../../../../genres/bands/create">Create new band</a></li>
+  <li class="menu-item"><a href="../../../../../genres/bands/albums/create">Create new album</a></li>
+  <li class="menu-item"><a href="../../../../../genres/bands/albums/ratings/create">Create new rating album</a></li>
+  <li class="menu-item"><a href="../../../../../genres/bands/albums/ratings/update">Update rating album</a></li>
+  <li class="menu-item"><a href="../../../../../genres/bands/albums/ratings/delete">Delete rating album</a></li>
+  <li class="menu-item"><a href="../../../../../genres">Show genres</a></li>
+  <li class="menu-item"><a href="../../../../../slack/invite">Invite to Slack team</a></li>
+  <li class="menu-item"><a href="../../../../../slack/verify">Verify Slack username</a></li>
+  <li class="menu-item"><a href="../../../../../slack/unsubscribe">Unsubscribe from Slack</a></li>
+  <li class="menu-item"><a href="../../../../slack/settings">Slack settings</a></li>
+  {{/if}}
+</ul>
+</div>
+</div>
+</nav>

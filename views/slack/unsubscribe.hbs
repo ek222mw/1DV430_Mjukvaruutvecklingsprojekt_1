@@ -1,0 +1,10 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h2>Sure you want to unsubscribe from slack notifications?</h2>
+<form class="" action="./unsubscribe" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <button>OK</button>
+</form>

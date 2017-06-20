@@ -1,0 +1,17 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h2>Genres</h2>
+{{#each genres}}
+<div class="items">
+<div>{{genre}}</div>
+<a href="../genres/bands/{{genre}}">
+  <img class="genre" src="{{imgpath}}" alt="{{genre}}">
+</a>
+
+<a href="../genres/update/{{genre}}">Edit</a>
+<a href="../genres/delete/{{genre}}">Delete</a>
+</div>
+{{/each}}

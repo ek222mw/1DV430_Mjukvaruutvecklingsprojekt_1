@@ -1,0 +1,18 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<form class="" action="../update/{{id}}" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+    <h1>Edit album</h1>
+  <input type="text"  name="album"  value="{{album}}"><br>
+  <textarea rows='6' cols='60' name="biography" placeHolder="Enter biography here"  >{{biography}}</textarea><br>
+  <textarea rows='6' cols='60' name="participant" placeHolder="Enter participants here" >{{participant}}</textarea><br>
+  <select id="band" name="band" selected="{{selected}}">
+    {{#each bands}}
+      <option value="{{band}}">{{band}}</option>
+    {{/each}}
+  </select>
+  <button>Update album</button>
+</form>

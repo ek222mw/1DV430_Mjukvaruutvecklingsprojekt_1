@@ -1,0 +1,15 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<form class="" action="./delete" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+    <h1>Delete rating</h1>
+  <select id="album" name="album">
+    {{#each ratings}}
+      <option value="{{album}}">{{album}}, {{rating}}</option>
+    {{/each}}
+  </select><br>
+  <button>Delete rating</button>
+</form>

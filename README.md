@@ -1,1 +1,1 @@
-# 1DV430_Mjukvaruutvecklingsprojekt_1
+For testing register/login function live go to https://207.154.200.30/

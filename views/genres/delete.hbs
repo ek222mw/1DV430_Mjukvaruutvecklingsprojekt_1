@@ -1,0 +1,10 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h1>Sure you want to remove {{genre}}?</h1>
+<form class="" action="./{{genre}}" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <input type="submit" name="genre" value="OK">
+</form>

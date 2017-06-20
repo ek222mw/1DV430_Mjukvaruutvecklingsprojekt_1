@@ -1,0 +1,25 @@
+{{#if error}}
+    <p>
+        Error: {{error}}
+    </p>
+{{/if}}
+<h1>Login</h1>
+<form class="" action="/users/login" method="post">
+  <input type="hidden" name="_csrf" value="{{csrftoken}}">
+  <input type="text" name="username" value="" placeHolder="Enter Username here">
+  <input type="password" name="password" value="" placeHolder="Enter Password here"><br><br>
+  <button>Login</button>
+</form>
+
+<!--from http://www.foxyform.com -->
+<h2>Contact form</h2>
+<a id="foxyform_embed_link_871725" href="http://www.foxyform.com/">foxyform</a>
+<script type="text/javascript">
+(function(d, t){
+   var g = d.createElement(t),
+       s = d.getElementsByTagName(t)[0];
+   g.src = "http://www.foxyform.com/js.php?id=871725&sec_hash=da509c3bd71&width=350px";
+   s.parentNode.insertBefore(g, s);
+}(document, "script"));
+</script>
+<!-- Do not change the code! -->
